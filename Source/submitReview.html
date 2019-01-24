@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <link href="css/pageFormat.css" rel="stylesheet"/>
+    <link href="css/formView.css" rel="stylesheet"/>
+ 
+    <title>Parking App</title>
+  </head>
+  <body class="defaultSpacingRemoval">
+    <header>
+        <img src="./images/parkingLogo.svg" id="parkingLogo"/>
+        <div id="details">
+          <h1>Parking Manager</h1>
+          <h3>Produced by: Phillip Pavlich 001414960</h3>
+        </div>  
+        <div class="logoutButton" onclick="location.href='./server-side/logout.php'">Logout</div>   
+    </header>
+    
+    <div id="menuBar">
+      <nav>
+        <div id="nav" >
+          <ul class="defaultSpacingRemoval">
+            <li class="menuOptions">
+              <a href="index.html">Home</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="search.html">Search</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="submission.html">Add a New Parking Spot</a>
+            </li>
+
+            <li class="menuOptions currentPage">
+              <a href="./server-side/retrieveBookingData.php">Bookings</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="./server-side/retrieveProfileData.php">Profile</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="register.html">Register</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div id="selector">
+
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+
+        </div>
+      </nav> 
+    </div>
+
+     <!-- This can only be implemented through the use of on click events with JavaScript-->
+    <div id="contentOptions" class="clearboth">
+      <ul>
+        <li class="dropoptions">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="dropoptions">
+          <a href="search.html">Search</a>
+        </li>
+        <li class="dropoptions">
+          <a href="submission.html">Add a New Parking Spot</a>
+        </li>
+        <li class="dropoptions">
+          <a href="./server-side/retrieveBookingData.php">Bookings</a>
+        </li>
+        <li class="dropoptions"> 
+          <a href="./server-side/retrieveProfileData.php">Profile</a>
+        </li>
+        <li class="dropoptions">
+          <a href="register.html">Register</a>
+        </li>
+      <ul>
+    </div>
+
+    <h2>Submit Review</h2>
+
+    <div class="newActBox">
+      <h2 class="centerText" id="reviewHeader"></h2>
+      
+      <form  id="formNewAct" action="./server-side/addRating.php" name="ratingForm" method="post">
+        <input class="hiddenInput" id="addressVal" type="text" name="address" value=""></input> 
+        <input class="hiddenInput" id="ownerVal" type="text" name="owner" value=""></input> 
+        <label class="floatLeft" for="rat">Rating:</label>
+        <br>
+        <input class="nameInput floatLeft" type="number" min='1' max='10' name="rating" placeholder="5"></input>
+        
+        <label class="floatLeft clearLeft" for="com">Comment:</label>
+        <br>
+        <input class="fullBox" type="text" name="comment" placeholder="Comment"></input> <br>
+
+        <input class="fullBox" type="submit" value="Submit Review">
+
+      </form>
+      
+    </div>
+
+    
+    
+    <footer>
+      <p>Copyright @ 2018 Phillip Pavlich CAN. All rights reserved. @Parking Logo Icon was made by 
+        <a target="_blank" href="https://www.flaticon.com/authors/freepik">freepik</a>
+        from 
+        <a target="_blank" href="https://www.flaticon.com">www.flaticon.com</a>
+        .
+      </p>
+    </footer>
+    <script>
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var add = url.searchParams.get("address");
+      var own = url.searchParams.get("owner");
+      document.getElementById("reviewHeader").innerHTML="Add a review for <br/>Address: "+add+ "<br/>Owner: "+own ;
+      document.getElementById("addressVal").value=add;
+      document.getElementById("ownerVal").value=own ;
+    </script>
+    <script type="text/javascript" src="js/NavBar.js"></script>
+    <script type="text/javascript" src="js/addingReview.js"></script>
+  </body>
+</html>

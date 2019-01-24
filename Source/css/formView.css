@@ -1,0 +1,467 @@
+/*Add the values of the sliders inside a white text box*/
+.chosenValue{
+	width: 40px;
+	height: 20px;
+	background-color: white;
+	border: 1px solid black;
+	text-align: center;
+}
+
+/*allow the sliders to be side by side*/
+.valueBox{
+	display: inline-block;
+	margin: 2%;
+
+}
+
+/*Adjust the formatting of the whole form */
+#searchCriteria{
+	margin: 1% 2%;
+	width: 60%;
+	
+	float: center;
+	border: 1px solid black;
+	padding: 2%;
+	border-radius: 2%;
+	background-color: #E9E9E9;
+
+}
+
+/*Adjust the formatting of the whole search box by adding margins */
+#searchBox, #resultsBox{
+	margin: 2%;
+
+}
+
+/*This outlines the box surrounding the image*/
+#map{
+	width: 80%;
+	min-height: 400px;
+    height: 60%;
+	margin: 2% auto;
+
+    background-color: grey;
+}
+
+/* Adjusting the image properties for the results after the search*/
+#sampleResults, #parkingSpot{
+	width: 100%;
+	height: 100%;
+	
+}
+
+
+/* adding border lines to the tables*/ 
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* add spacing to table date */
+td{
+	padding: 2px;
+}
+
+#tableResults{
+	border: 1px solid black;
+	margin: auto;
+	
+
+}
+
+#verticalTable{
+	border: solid 1px black;
+	margin-left: 2%;
+	float: left;
+}
+
+
+/*This outlines the box surrounding the parking image */
+#parkingGrid{
+	width: 40%;
+	height: 400px;
+	margin: 2%;
+	float: right;
+}
+
+/* adjusting the description section on the parking space*/
+#furtherDetails{
+	width: 40%;
+	margin-left: 2%;
+	margin-bottom: 2%;
+	display: inline-block;
+	float: left;
+}
+
+/*Allow items to be overrided to be displayed on the same line */
+.sameLine{
+	display: inline-block;
+}
+
+/* Changing the parking spot image properties*/
+#parkingSpot{
+	float: right;
+	
+	display: inline-block;
+}
+
+/*setting return button to be red*/
+.returnButton{
+	background-color: #cc0000;
+	color: white;
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 1%;
+}
+
+/*setting book button to be green*/
+.acceptButton{
+	background-color: #009900;
+	color: white;
+	float: right;
+	margin-right: 5%;
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 1%;
+}
+
+/*on hover, the buttons become transparent*/
+.acceptButton:hover, .returnButton:hover{
+	background: transparent; 
+	color: black;
+}
+
+/*reviews need to be found at the bottom of the screen*/
+#reviews{
+	clear: both;
+}
+
+/*Alter the box surrounding the form */
+.newActBox{
+	width: 60%;
+	
+	margin: 0 auto;
+	
+}
+
+/*Alter the form itself */
+#formNewAct, #formNewAct1{
+	width: 60%;
+	margin: 2% auto;
+	float: center;
+	border: 1px solid black;
+	padding: 2%;
+	border-radius: 2%;
+	background-color: #E9E9E9;
+}
+.newActBox form{
+	float: center;
+}
+
+/* Adjust the width and height for the input boxes on the register page to be a full width of the page*/
+.newActBox form .fullBox{
+	margin: 2%;
+	width: 96%;
+	height: 30px;
+
+}
+
+/*Adjust the inputsto fill up half of the form */
+.newActBox form .nameInput{
+	margin: 2% 0%;
+	width: 48%;
+	height: 30px;
+
+}
+
+/*Float to each side */
+.floatLeft{	
+	float: left;
+}
+.floatRight{
+	float: right;
+}
+
+/*Center align text */
+.centerText{
+	text-align: center;
+
+}
+
+/*Alter the box surrounding the form */
+#loginBox{
+	width: 50%;
+	padding: 2%;
+	text-align: center;
+	margin: 2% auto;
+	border: 1px solid black;
+	background-color: #E9E9E9;
+	
+}
+
+#loginBox input {
+	margin: 2%;
+	width: 40%;
+	
+	
+}
+
+/* Adjusting the button settings on the main menu*/
+#loginButton{
+	margin: 2%;
+	border-radius: 2%;
+	border: 1px solid black;
+	background-color: #0000e6;
+	color: white;
+	padding: 2%;
+}
+
+#signupButton{
+	border-radius: 10%;
+	border: 1px solid black;
+	background-color: #009900;
+	color: white;
+	border: 1px solid black;
+	padding: 2%;
+}
+
+/* Hover animations for the main menu buttons */
+#loginButton:hover, #signupButton:hover{
+	background: transparent; 
+	color: black;
+
+}
+
+/* Adjust the top margin for the main description*/
+.mainDesc{
+	margin-top: 10%;
+}
+
+/* Adjust margins on bookings table*/ 
+#tableBookings, #tableRequests{
+	margin: 2%;
+	
+
+}
+
+/* Button to remove bookings*/ 
+.removeButton{
+	background-color: red;
+	border-radius: 100%;
+	padding: 4px;
+	margin: 5px;
+	border: 1px solid black;
+
+}
+
+.removeButton:hover, .addButton:hover, .reviewButton:hover{
+	background: transparent;
+}
+
+/* Button to add bookings*/ 
+.addButton, .reviewButton{
+	background-color: green;
+	border-radius: 100%;
+	padding: 4px;
+	margin: 5px;
+	border: 1px solid black;
+
+}
+
+.reviewButton{
+	border-radius: 5%;
+}
+
+/*Assigning outer video box properties*/
+#sampleVid, #uploadFile, #uploadFile2{
+	clear: both;
+	margin: 2%;
+	float: left;
+
+}
+
+/*Giving video height and width properties*/
+#vidSource{
+	height: 240px;
+	width: 320px;
+}
+
+#mapholder{
+	width: 400px;
+	height: 400px;
+}
+
+#verifyLocation{
+	width: 50%;
+	height: 20px;
+	border: 1px solid black;
+	clear: both;
+	margin: 2% auto;
+	text-align: center;
+	background-color: #80bfff;
+}
+
+#verifyLocation:hover{
+	background-color: white;
+}
+
+/*Make hidden inputs not visible for the user */
+.hiddenInput{
+	display: none;
+}
+
+.clearLeft{
+	clear: left;
+}
+
+/*Media query to not allow forms to schrink too small*/
+@media only screen and (max-width: 850px) {
+    .newActBox{
+		width: 510px;
+
+    }
+		
+	#loginBox{
+		width: 80%;
+	}
+
+	.returnButton{
+		clear: both;
+		float: left;
+		margin: 2%;
+		
+
+	}
+	.acceptButton{
+		clear: both;
+		float: left;
+		margin: 2%;
+		
+
+	}
+
+	#parkingGrid{
+		width: 300px;
+		height: 200px;
+		
+	}
+}
+
+
+
+
+/*allow the form to take up 80 percent of the box surrounding it*/
+@media only screen and (max-width: 510px) {
+    .newActBox{
+		width: 400px;
+		padding: 1%;
+
+		
+    }
+    #formNewAct, #formNewAct1{
+		width: 80%;
+	}
+
+	#furtherDetails{
+		clear: both;
+		width: 80%;
+		
+		float: left;
+	}
+
+	#parkingGrid{
+		width: 200px;
+		height: 150px;
+		
+	}
+		
+}
+
+/*Shrink the size of the box surrounding the form*/
+@media only screen and (max-width: 430px) {
+    .newActBox{
+		width: 300px;
+		
+    }
+    #formNewAct, #formNewAct1{
+		width: 100%;
+	}
+
+	#parkingGrid{
+		clear: both;
+		float: left;
+		
+	}
+
+	#sampleVid{
+		width: 200px;
+		height: 300px;
+
+	}
+	#vidSource{
+		width: 100%;
+		height: 60%;
+	}
+		
+}
+
+/*Reduce the margins of the forms and allow them to be full screen size*/
+@media only screen and (max-width: 350px) {
+    .newActBox{
+		width: 98%;
+		margin: 1%;
+		padding: 0;
+		
+    }
+    #formNewAct, #formNewAct1{
+		width: 100%;
+		padding-right: 0;
+		padding-left: 0;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.makeFull{
+		width: 96%;
+		margin: 2%;
+
+	}
+
+	#searchCriteria{
+		width: 80%;
+		margin: auto;
+	}
+
+	#furtherDetails{
+		clear: both;
+		width: 100%;
+		margin: auto;
+		float: center;
+	}
+	
+		
+}
+
+/* Adjust half size inputs to take the full width*/
+@media only screen and (max-width: 250px) {
+    .newActBox form .nameInput{
+		margin: 2%;
+		width: 96%;
+		height: 30px;
+		padding: 0;
+
+	}
+
+	#parkingGrid{
+		width: 80%;
+		
+	}
+		
+}
+
+
+
+
+
+

@@ -1,0 +1,258 @@
+/*default spacing removal*/
+.defaultSpacingRemoval{
+	margin: 0px;
+	padding: 0px;
+}
+
+/*formatting for nav bar options*/
+.menuOptions{
+	list-style-type: none; 
+	display:inline-block;
+	padding: 5px 15px;
+	
+	border: 1px solid black;
+	background-color: #80bfff;
+	border-radius:5px;
+	
+	margin:5px 3px 5px 3px;
+
+}
+
+/* Adjust the background for the navbar*/
+#menuBar{
+	border: 1px solid black;
+	border-top: 0px;
+	background-color: #80bfff;
+	padding: 0px;
+	margin: 0px;
+	clear: both;
+
+	width: 100%;
+	height: 40px;
+	box-shadow: 0px 0px 10px #000;
+	overflow: hidden;
+	border-bottom: 1px solid black;
+
+
+}
+
+/* allow change in color for nav bar when hovering */
+.menuOptions:hover{
+	
+	background-color: white;
+
+
+}
+
+/* Give properties to the website's logo, copyright can be found in footer of html*/
+#parkingLogo{
+	width: 80px;
+	height: 120px;
+	display: inline-block;
+	margin: 0% 4% 0% 2%;
+	float: left;
+	
+}
+
+/* Allowing the header text to be displayed on the same line*/
+#details{
+	display: inline-block;
+	clear: none;
+	float: left;
+}
+
+/* assigning default properties for the header section*/ 
+header{
+	border: 1px solid black;
+	background-color: #3399ff;
+	height: 120px;
+	
+
+}
+
+
+/* Changes the background color for the current page that the user is on */
+.currentPage, .currentPage:hover{
+	background-color: #A9A9A9;
+
+}
+
+/* adjust spacing of footer*/
+footer{
+	border-top: 1px solid black;
+	text-align: center;
+	margin-top: 10%;
+	clear: both;
+}
+
+/*Designing the div to build the drop down menu */ 
+#selector{
+	float: right;
+	width: 34px;
+	height: 30px;
+	padding: 0px;
+	margin: 2px 6px;
+	border: 1px solid black;
+	border-radius: 5%;
+	padding: 2px;
+	clear: both;
+	display: none;
+	cursor: pointer;
+	outline: none;
+
+	
+}
+/* On hovering on drop down menu, color changes*/
+#selector:hover{
+	
+	background-color: #527a7a;
+
+}
+
+/*Designing the 3 bars that are part of the top down menu */
+.bar{
+	width: 24px;
+	height: 3px;
+	background-color: white;
+	border: 1px solid white;
+	border-radius: 20%;
+	margin: 4px;
+
+}
+
+/*Designing the box that holds the drop down options */
+#contentOptions {
+    padding: 0px 14px 0px 0px;
+    
+    background-color: #80bfff;
+    max-height: 0;
+    
+    overflow: hidden;
+    
+    display: none;
+    transition: max-height 0.2s ease-out;
+    position: absolute;
+    
+    top: 162px;
+    right: 0px;
+    z-index: 1030;
+    border: 1px solid black;
+}
+
+/*Changing the symbol and display to help the user toggle*/
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    /*content: "\2796";*/ /* Unicode character for "minus" sign (-) */
+}
+
+/* Not in list format for drop down options*/ 
+.dropoptions{
+	list-style-type: none; 
+
+}
+
+/*Changing color of text for drop down options*/
+.dropoptions a{
+	color: white;
+	
+	
+}
+
+/* on hover change link color*/
+#contentOptions ul li a:hover {
+	/*background-color: #CDCDCD;*/ 
+	color: #333333;
+
+}
+
+.logoutButton{
+	width: 80px;
+	height: 30px;
+	border-radius: 5%;
+	background-color: red;
+	color: white;
+	float: right;
+	margin: 1% 1% 0 0;
+	text-align: center;
+	padding-top: 6px;
+}
+
+.logoutButton:hover{
+	background-color: white;
+	color: black;
+}
+
+/*Media query to allow the nav bar to turn into a drop down menu for smaller screens*/
+@media only screen and (max-width: 735px) {
+    #nav{
+    	display: none;
+    }
+
+    #selector{
+    	display: inline;
+    }
+
+    #contentOptions{
+    	/*overflow: visible;*/
+    	display: inline;
+
+    }
+    
+}
+
+/*Media query to adjust the size of the page header*/
+@media only screen and (max-width: 525px) {
+   
+    h1{
+    	font-size: 20px;
+    }
+
+    h3{
+    	font-size: 16px;
+    }
+
+    #parkingLogo{
+		width: 60px;
+		height: 90px;
+		
+		
+	}
+
+	.logoutButton{
+		width: 60px;
+		height: 20px;
+		padding-top: 0px;
+	}
+}
+
+/*Media query to adjust the size of the page header*/
+@media only screen and (max-width: 375px) {
+
+	h1{
+    	text-align: center;
+    }
+
+    h3{
+    	text-align: center;
+    }
+
+    #parkingLogo{
+		display: none;
+	
+	}
+	#details{
+		display: inline-block;
+		clear: none;
+		float: center;
+		margin: auto;
+		padding: 0;
+		width: 100%;
+	}
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <link href="css/pageFormat.css" rel="stylesheet"/>
+    <link href="css/formView.css" rel="stylesheet"/>
+ 
+    <title>Parking App</title>
+  </head>
+  <body class="defaultSpacingRemoval">
+    <header>
+        <img src="./images/parkingLogo.svg" id="parkingLogo"/>
+        <div id="details">
+          <h1>Parking Manager</h1>
+          <h3>Produced by: Phillip Pavlich 001414960</h3>
+        </div>    
+    </header>
+    
+    <div id="menuBar">
+      <nav>
+        <div id="nav" >
+          <ul class="defaultSpacingRemoval">
+            <li class="menuOptions currentPage">Home</li>
+
+            <li class="menuOptions">
+              <a href="search.html">Search</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="submission.html">Add a New Parking Spot</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="./server-side/retrieveBookingData.php">Bookings</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="./server-side/retrieveProfileData.php">Profile</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="register.html">Register</a>
+            </li>
+          
+          </ul>
+        </div>
+
+        <div id="selector">
+
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+
+        </div>
+      </nav> 
+      
+    </div>
+
+    <!-- This can only be implemented through the use of on click events with JavaScript-->
+    <div id="contentOptions" class="clearboth">
+      <ul>
+        <li class="dropoptions">Home</li>
+        <li class="dropoptions">
+          <a href="search.html">Search</a>
+        </li>
+        <li class="dropoptions">
+          <a href="submission.html">Add a New Parking Spot</a>
+        </li>
+        <li class="dropoptions">
+          <a href="./server-side/retrieveBookingData.php">Bookings</a>
+        </li>
+        <li class="dropoptions"> 
+          <a href="./server-side/retrieveProfileData.php">Profile</a>
+        </li>
+        <li class="dropoptions">
+          <a href="register.html">Register</a>
+        </li>
+      <ul>
+    </div>
+  
+
+    <h2>Welcome to the Parking Manager website! </h2>
+
+    <div id="loginBox">
+      <form action="./server-side/login.php" name="loginForm" method="post">
+        <input class="nameInput floatLeft" type="text" name="email" placeholder="Email"></input>
+
+        <input class="nameInput floatLeft" type="password" name="pass" placeholder="Password"></input>
+        
+        
+        <input type="submit" id="loginButton" value="Login"></input>
+
+        <h2>OR</h2>
+
+        <Button id="signupButton" onclick="javascript: form.action='./register.html';" >Sign Up</Button>
+      </form>
+    </div>
+
+    <h3 class="centerText">Available parking spots for everyone!</h3>
+
+    <p class="centerText mainDesc">Please login to proceed. You will then have access to add rental parking spots, book parking spots, and search available parking spots. If you do not currently have an account, please sign up! </p>
+    
+    <footer>
+      <p>Copyright @ 2018 Phillip Pavlich CAN. All rights reserved. @Parking Logo Icon was made by 
+        <a target="_blank" href="https://www.flaticon.com/authors/freepik">freepik</a>
+        from 
+        <a target="_blank" href="https://www.flaticon.com">www.flaticon.com</a>
+        .
+      </p>
+    </footer>
+    <script type="text/javascript" src="js/NavBar.js"></script>
+  </body>
+</html>

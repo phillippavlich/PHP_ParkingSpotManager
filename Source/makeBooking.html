@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <link href="css/pageFormat.css" rel="stylesheet"/>
+    <link href="css/formView.css" rel="stylesheet"/>
+ 
+    <title>Parking App</title>
+  </head>
+  <body class="defaultSpacingRemoval">
+    <header>
+        <img src="./images/parkingLogo.svg" id="parkingLogo"/>
+        <div id="details">
+          <h1>Parking Manager</h1>
+          <h3>Produced by: Phillip Pavlich 001414960</h3>
+        </div>  
+        <div class="logoutButton" onclick="location.href='./server-side/logout.php'">Logout</div>   
+    </header>
+    
+    <div id="menuBar">
+      <nav>
+        <div id="nav" >
+          <ul class="defaultSpacingRemoval">
+            <li class="menuOptions">
+              <a href="index.html">Home</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="search.html">Search</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="submission.html">Add a New Parking Spot</a>
+            </li>
+
+            <li class="menuOptions currentPage">
+              <a href="./server-side/retrieveBookingData.php">Bookings</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="./server-side/retrieveProfileData.php">Profile</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="register.html">Register</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div id="selector">
+
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+
+        </div>
+      </nav> 
+    </div>
+
+    
+    <div id="contentOptions" class="clearboth">
+      <ul>
+        <li class="dropoptions">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="dropoptions">
+          <a href="search.html">Search</a>
+        </li>
+        <li class="dropoptions">
+          <a href="submission.html">Add a New Parking Spot</a>
+        </li>
+        <li class="dropoptions">
+          <a href="./server-side/retrieveBookingData.php">Bookings</a>
+        </li>
+        <li class="dropoptions"> 
+          <a href="./server-side/retrieveProfileData.php">Profile</a>
+        </li>
+        <li class="dropoptions">
+          <a href="register.html">Register</a>
+        </li>
+      <ul>
+    </div>
+
+    <h2>Make a Booking</h2>
+
+    <div class="newActBox">
+      <h2 class="centerText" id="bookingHeader"></h2>
+      
+      <form  id="formNewAct" action="./server-side/addBooking.php" name="bookingForm" method="post" novalidate>
+        <input class="hiddenInput" id="addressVal" type="text" name="address" value=""></input> 
+        <input class="hiddenInput" id="costVal" type="number" name="cost" value=""></input> 
+
+
+
+        <label class="floatLeft" for="from">Book it from:</label>
+        <input class="fullBox" type="date" name="fromDate" id="fromDate" onchange="updatePrice()"></input> 
+
+        <label class="floatLeft" for="to">Book it until:</label>
+        <input class="fullBox" type="date" name="toDate" id="toDate" onchange="updatePrice()"></input> 
+
+        <h2 class="centerText" id="costTag"></h2>
+
+        <input class="fullBox" type="submit" value="Make Booking">
+
+      </form>
+      
+    </div>
+
+    
+    
+    <footer>
+      <p>Copyright @ 2018 Phillip Pavlich CAN. All rights reserved. @Parking Logo Icon was made by 
+        <a target="_blank" href="https://www.flaticon.com/authors/freepik">freepik</a>
+        from 
+        <a target="_blank" href="https://www.flaticon.com">www.flaticon.com</a>
+        .
+      </p>
+    </footer>
+    <script>
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var add = url.searchParams.get("address");
+      var cost = url.searchParams.get("cost");
+      
+      document.getElementById("bookingHeader").innerHTML="Make a booking for <br/>Address: "+add;
+      document.getElementById("addressVal").value=add;
+      document.getElementById("costTag").innerHTML="Cost: 0 days x $"+cost + " = $0";
+  
+    </script>
+    <script type="text/javascript" src="js/NavBar.js"></script>
+    
+    <script type="text/javascript" src="js/updatePrice.js"></script>
+  </body>
+</html>

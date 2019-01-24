@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <link href="css/pageFormat.css" rel="stylesheet"/>
+    <link href="css/formView.css" rel="stylesheet"/>
+ 
+    <title>Parking App</title>
+
+  </head>
+  <body class="defaultSpacingRemoval">
+    <header>
+        <img src="./images/parkingLogo.svg" id="parkingLogo"/>
+        <div id="details">
+          <h1>Parking Manager</h1>
+          <h3>Produced by: Phillip Pavlich 001414960</h3>
+        </div> 
+        <div class="logoutButton" onclick="location.href='./server-side/logout.php'">Logout</div>    
+    </header>
+    
+    <div id="menuBar">
+      <nav>
+        <div id="nav" >
+          <ul class="defaultSpacingRemoval">
+            <li class="menuOptions">
+              <a href="index.html">Home</a>
+            </li>
+
+            <li class="menuOptions currentPage">
+              Search
+            </li>
+
+            <li class="menuOptions">
+              <a href="submission.html">Add a New Parking Spot</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="./server-side/retrieveBookingData.php">Bookings</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="./server-side/retrieveProfileData.php">Profile</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="register.html">Register</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div id="selector">
+
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+
+        </div>
+      </nav> 
+    </div>
+
+    <!-- This can only be implemented through the use of on click events with JavaScript-->
+    <div id="contentOptions" class="clearboth">
+      <ul>
+        <li class="dropoptions">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="dropoptions">Search</li>
+        <li class="dropoptions">
+          <a href="submission.html">Add a New Parking Spot</a>
+        </li>
+        <li class="dropoptions">
+          <a href="./server-side/retrieveBookingData.php">Bookings</a>
+        </li>
+        <li class="dropoptions"> 
+          <a href="./server-side/retrieveProfileData.php">Profile</a>
+        </li>
+        <li class="dropoptions">
+          <a href="register.html">Register</a>
+        </li>
+      <ul>
+    </div>
+
+    <div id="searchBox">
+      <h2>Search</h2>
+      <h4>Change the filters below to improve your search criteria: </h2>
+
+      <form id="searchCriteria"  action="./server-side/getSearchResults.php">
+
+        Search by address name (leave blank to grab all addresses): <br>
+        <input class="makeFull" type="text" name="searchName" value=""></input> <br>
+
+        Enter the maximum distance range in km: <br>
+        <input class="makeFull" type="number" name="distance" value="20"></input> <br>
+
+        <label for="location">
+          <strong>Your Location:</strong>
+        </label>
+        <div id="locationData" class="makeFull" value="help">
+          Unknown
+        </div>
+        <input id="latVal" type="hidden" name="latitude" value="0"></input>
+        <input id="lonVal" type="hidden" name="longitude" value="0"></input>
+         <br>
+
+        <div class="valueBox">
+          <label for="price-min">Price Min:</label>
+          <input type="range" name="priceMin" id="priceMin" value="2" min="0" max="1000">
+
+          <div class="chosenValue" id="minTextbox">2</div>
+        </div>
+
+        <div class="valueBox">
+          <label for="price-max">Price Max:</label>
+          <input type="range" name="priceMax" id="priceMax" value="80" min="0" max="1000">
+
+          <div class="chosenValue" id="maxTextbox">80</div>
+        
+        </div> <br>
+
+        Enter the minimum parking rating:<br>
+        <input class="makeFull" type="number" name="rating" min="1" max="10" value="2"></input> <br><br>
+
+        <input type="submit" value="Search">
+
+      </form>
+     
+      
+    </div>
+    
+    <footer>
+      <p>Copyright @ 2018 Phillip Pavlich CAN. All rights reserved. @Parking Logo Icon was made by 
+        <a target="_blank" href="https://www.flaticon.com/authors/freepik">freepik</a>
+        from 
+        <a target="_blank" href="https://www.flaticon.com">www.flaticon.com</a>
+        .
+      </p>
+    </footer>
+    <script>
+      var slider = document.getElementById("priceMin");
+      var output = document.getElementById("minTextbox");
+      output.innerHTML = slider.value;
+
+      var slider1 = document.getElementById("priceMax");
+      var output1 = document.getElementById("maxTextbox");
+      output1.innerHTML = slider1.value;
+
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
+
+      slider1.oninput = function() {
+        output1.innerHTML = this.value;
+      }
+    </script>
+    <script type="text/javascript" src="js/NavBar.js"></script>
+    
+    <script type="text/javascript" src="js/geoLocation.js"></script>
+    <script async defer
+
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnD9SY3P7Q3O_wXzL7n_x8tvaT7jX92QE">
+    </script>
+    
+
+  </body>
+</html>

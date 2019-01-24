@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <link href="css/pageFormat.css" rel="stylesheet"/>
+    <link href="css/formView.css" rel="stylesheet"/>
+ 
+    <title>Parking App</title>
+  </head>
+  <body class="defaultSpacingRemoval">
+    <header>
+        <img src="./images/parkingLogo.svg" id="parkingLogo"/>
+        <div id="details">
+          <h1>Parking Manager</h1>
+          <h3>Produced by: Phillip Pavlich 001414960</h3>
+        </div>  
+        <div class="logoutButton" onclick="location.href='./server-side/logout.php'">Logout</div>   
+    </header>
+    
+    <div id="menuBar">
+      <nav>
+        <div id="nav" >
+          <ul class="defaultSpacingRemoval">
+            <li class="menuOptions">
+            	<a href="index.html">Home</a>
+            </li>
+
+
+            <li class="menuOptions">
+              <a href="search.html">Search</a>
+            </li>
+
+            <li class="menuOptions currentPage">
+              Add a New Parking Spot
+            </li>
+
+            <li class="menuOptions">
+              <a href="./server-side/retrieveBookingData.php">Bookings</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="./server-side/retrieveProfileData.php">Profile</a>
+            </li>
+
+            <li class="menuOptions">
+              <a href="register.html">Register</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div id="selector">
+
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+
+        </div>
+      </nav> 
+    </div>
+
+    <!-- This can only be implemented through the use of on click events with JavaScript-->
+    <div id="contentOptions" class="clearboth">
+      <ul>
+        <li class="dropoptions">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="dropoptions">
+          <a href="search.html">Search</a>
+        </li>
+        <li class="dropoptions">Add a New Parking Spot</li>
+        <li class="dropoptions">
+          <a href="./server-side/retrieveBookingData.php">Bookings</a>
+        </li>
+        <li class="dropoptions"> 
+          <a href="./server-side/retrieveProfileData.php">Profile</a>
+        </li>
+        <li class="dropoptions">
+          <a href="register.html">Register</a>
+        </li>
+      <ul>
+    </div>
+
+    <h2>Add a New Parking Spot</h2>
+
+    
+    <div class="newActBox">
+      <h4 class="centerText">Please enter the following information:</h4>
+      
+      <form  id="formNewAct" action="./server-side/addParking.php" name="parkingForm" method="post" enctype="multipart/form-data" novalidate>
+        
+        <h4>New Parking for Owner</h4>
+
+        <input id="addressBox" class="fullBox" type="text" name="address" placeholder="Address"></input> <br>
+
+        <input id="cityBox" class="fullBox" type="text" name="city" placeholder="City"></input> 
+
+        <input id="provinceBox" class="nameInput floatLeft" type="text" name="province" placeholder="Province"></input>
+
+        <input class="nameInput floatRight" type="text" name="postalCode" placeholder="Postal Code"></input> 
+
+        <input id="countryBox" class="fullBox" type="text" name="country" placeholder="Country"></input> <br>
+
+        <div id="verifyLocation" >Verify Location</div>
+
+        <div id="locationData" class="makeFull" value="help">
+          <h4>Your Location is:</h4>
+          Unknown
+        </div>
+
+        <h4>When is it available?</h4>
+        <input class="hiddenInput" type="number" name="latitude" id="latitudeHidden" value=""></input> 
+        <input class="hiddenInput" type="number" name="longitude" id="longitudeHidden" value=""></input> 
+
+        <input class="fullBox" type="date" name="dayAvailable"></input> <br>
+
+        <input class="nameInput floatLeft" type="number" name="price" placeholder="Price"></input>
+
+        <input class="checkbox" type="checkbox" name="overnight">Available Overnight</input>
+        
+        <h4 id="uploadFile">Upload a video file: </h4>
+        <input type="file" name="vid" accept="video/*">
+        <br>
+
+
+        <h4 id="uploadFile2">Upload an image: </h4>
+        <input type="file" name="pic" accept="image/*">
+        <br>
+
+        <input class="fullBox" type="text" name="desc" placeholder="Description"></input> 
+
+        <input type="hidden" name="MAX_FILE_SIZE" value="10000000000" />
+        <input id="boxSubmission" class="fullBox" type="submit" value="Add Parking Spot">
+
+      </form>
+      
+       
+      
+    </div>
+    
+    <footer>
+      <p>Copyright @ 2018 Phillip Pavlich CAN. All rights reserved. @Parking Logo Icon was made by 
+        <a target="_blank" href="https://www.flaticon.com/authors/freepik">freepik</a>
+        from 
+        <a target="_blank" href="https://www.flaticon.com">www.flaticon.com</a>
+        .
+      </p>
+    </footer> 
+    <script type="text/javascript" src="js/NavBar.js"></script> 
+    <script type="text/javascript" src="js/geocodeFindLocation.js"></script>  
+  </body>
+</html>
