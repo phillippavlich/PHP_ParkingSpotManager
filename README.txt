@@ -1,6 +1,4 @@
 Phillip Pavlich
-001414960
-pavlicpm
 
 I have a file called datamodel.sql that contains all 4 of my create table statements. Please make sure to run it in the order that it was built
 as there are foreign key dependencies accross tables.
